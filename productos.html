@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>LevelUp Gaming - Productos</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Level<span class="text-success">Up</span> Gaming</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="productos.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+                        <li class="nav-item">
+                            <button class="btn btn-success ms-lg-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas">
+                                🛒 Carrito <span class="badge bg-light text-dark" id="contadorCarrito">0</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mt-5 mb-5">
+            <h1>Nuestros Productos</h1>
+            <p class="text-muted">Revisa el stock disponible y arma tu carrito.</p>
+
+            <div class="mb-4">
+                <button class="btn btn-outline-dark btn-sm" onclick="filtrarCategoria('Todos')">Todos</button>
+                <button class="btn btn-outline-dark btn-sm" onclick="filtrarCategoria('Periféricos')">Periféricos</button>
+                <button class="btn btn-outline-dark btn-sm" onclick="filtrarCategoria('Hardware PC')">Hardware PC</button>
+                <button class="btn btn-outline-dark btn-sm" onclick="filtrarCategoria('Sillas Gamer')">Sillas Gamer</button>
+                <button class="btn btn-outline-dark btn-sm" onclick="filtrarCategoria('Accesorios')">Accesorios</button>
+            </div>
+
+            <div class="row g-4" id="listaProductos">
+                <!-- Las tarjetas de productos se generan con JavaScript -->
+            </div>
+        </div>
+
+        <footer class="bg-dark text-light text-center py-3">
+            <div class="container">
+                <p class="mb-0">&copy; 2026 LevelUp Gaming. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+        <!-- Carrito -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="carritoOffcanvas">
+            <div class="offcanvas-header">
+                <h5>Tu Carrito</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column">
+                <ul class="list-group mb-3" id="itemsCarrito">
+                    <!-- Items del carrito -->
+                </ul>
+                <h5>Total: <span id="totalCarrito">$0</span></h5>
+                <button class="btn btn-outline-danger mt-2" onclick="vaciarCarrito()">Vaciar carrito</button>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/productos.js"></script>
+    </body>
+</html>
