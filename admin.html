@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>LevelUp Gaming - Panel Administrativo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Level<span class="text-success">Up</span> Gaming</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="admin.html">Admin</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mt-5 mb-5">
+            <h1>Panel Administrativo</h1>
+            <p class="text-muted">Gestión de inventario de LevelUp Gaming.</p>
+
+            <div class="alert alert-danger" id="alertaStockCritico"></div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h4>Agregar nuevo producto</h4>
+                    <form id="formProducto" onsubmit="agregarProducto(event)">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Nombre</label>
+                                <input type="text" id="nombreProducto" class="form-control" required>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label">Categoría</label>
+                                <select id="categoriaProducto" class="form-select" required>
+                                    <option value="Periféricos">Periféricos</option>
+                                    <option value="Hardware PC">Hardware PC</option>
+                                    <option value="Sillas Gamer">Sillas Gamer</option>
+                                    <option value="Accesorios">Accesorios</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label">Marca</label>
+                                <input type="text" id="marcaProducto" class="form-control" required>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label">Precio</label>
+                                <input type="number" id="precioProducto" class="form-control" min="0" required>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label">Stock</label>
+                                <input type="number" id="stockProducto" class="form-control" min="0" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success mt-3">Agregar Producto</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4>Inventario de Productos</h4>
+                    <p class="small text-muted">Regla de negocio: si el stock es <strong>menor o igual a 3 unidades</strong>, el producto se marca como <span class="text-danger fw-bold">Stock Crítico</span>.</p>
+
+                    <table class="table table-hover align-middle">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Producto</th>
+                                <th>Categoría</th>
+                                <th>Marca</th>
+                                <th>Precio</th>
+                                <th>Stock</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaInventario">
+                            <!-- Filas generadas por JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-dark text-light text-center py-3">
+            <div class="container">
+                <p class="mb-0">&copy; 2026 LevelUp Gaming. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/admin.js"></script>
+    </body>
+</html>
