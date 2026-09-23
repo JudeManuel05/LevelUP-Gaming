@@ -12,5 +12,5 @@ let productos = [
 ];
 
 function formatearPrecio(precio) {
-    return "$" + precio.toLocaleString("es-ES");
+    return "$" + precio.toLocaleString("es-CL");
 }
