@@ -1,0 +1,202 @@
+:root {
+    --lu-verde: #39ff14;          
+    --lu-verde-oscuro: #1fa80a;
+    --lu-fondo: #0f1115;          
+    --lu-fondo-claro: #f4f6f8;    
+    --lu-texto: #1c1f24;
+    --lu-rojo: #ff3b3b;
+    --lu-radio: 12px;
+    --lu-fuente-titulos: "Orbitron", "Segoe UI", sans-serif;
+    --lu-fuente-texto: "Roboto", "Segoe UI", sans-serif;
+}
+
+
+body {
+    font-family: var(--lu-fuente-texto);
+    background-color: var(--lu-fondo-claro);
+    color: var(--lu-texto);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+h1, h2, h3, .navbar-brand, .display-5 {
+    font-family: var(--lu-fuente-titulos);
+    letter-spacing: 0.5px;
+}
+
+
+.lu-header {
+    background-color: var(--lu-fondo);
+    border-bottom: 2px solid var(--lu-verde);
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.lu-header .navbar {
+    background-color: transparent !important;
+}
+
+.navbar-brand img {
+    height: 36px;
+    margin-right: 8px;
+}
+
+.navbar-brand .text-success,
+.lu-acento {
+    color: var(--lu-verde) !important;
+}
+
+.navbar .nav-link {
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--lu-verde) !important;
+}
+
+
+.lu-hero {
+    background: linear-gradient(135deg, #0f1115 0%, #1b2330 60%, #0e3b12 100%);
+    color: #fff;
+    padding: 4rem 0;
+}
+
+.lu-hero img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 18px rgba(57, 255, 20, 0.35));
+}
+
+
+.btn-success {
+    background-color: var(--lu-verde-oscuro);
+    border-color: var(--lu-verde-oscuro);
+    font-weight: 600;
+}
+
+.btn-success:hover {
+    background-color: var(--lu-verde);
+    border-color: var(--lu-verde);
+    color: #000;
+}
+
+
+.card {
+    border: none;
+    border-radius: var(--lu-radio);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lu-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.lu-precio-oferta {
+    color: var(--lu-rojo);
+    font-weight: 700;
+}
+
+
+.lu-marca {
+    background-color: var(--lu-fondo);
+    color: #fff;
+    border: 1px solid var(--lu-verde);
+    border-radius: 30px;
+    padding: 0.5rem 1.2rem;
+    margin: 0.25rem;
+    display: inline-block;
+    font-weight: 600;
+}
+
+
+.lu-blog-img {
+    width: 100%;
+    max-height: 260px;
+    object-fit: cover;
+    border-radius: var(--lu-radio) var(--lu-radio) 0 0;
+}
+
+.lu-video {
+    border-radius: var(--lu-radio);
+    overflow: hidden;
+}
+
+
+.lu-stock-critico {
+    animation: parpadeo 1.5s infinite;
+}
+
+@keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.55; }
+}
+
+
+.lu-form-card {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--lu-verde-oscuro);
+    box-shadow: 0 0 0 0.2rem rgba(57, 255, 20, 0.25);
+}
+
+.form-text.lu-sugerencia {
+    color: #6c757d;
+}
+
+.lu-medidor {
+    height: 6px;
+    border-radius: 3px;
+    background-color: #e9ecef;
+    overflow: hidden;
+}
+
+.lu-medidor div {
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+
+.lu-footer {
+    background-color: var(--lu-fondo);
+    color: #cfd4da;
+    border-top: 2px solid var(--lu-verde);
+}
+
+.lu-footer a {
+    color: #cfd4da;
+    text-decoration: none;
+}
+
+.lu-footer a:hover {
+    color: var(--lu-verde);
+}
+
+.lu-footer h5 {
+    color: #fff;
+    font-family: var(--lu-fuente-titulos);
+    font-size: 1rem;
+}
+
+
+@media (max-width: 576px) {
+    .lu-hero {
+        padding: 2.5rem 0;
+    }
+
+    .display-5 {
+        font-size: 1.8rem;
+    }
+}
