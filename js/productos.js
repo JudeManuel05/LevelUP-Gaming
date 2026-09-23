@@ -20,7 +20,7 @@ function renderizarProductos(lista) {
 
         let tarjeta =
             '<div class="col-md-3 col-sm-6">' +
-                '<div class="card shadow-sm h-100 lu-card-hover">' +
+                '<div class="card shadow-sm h-100">' +
                     '<div class="card-body text-center">' +
                         '<div class="fs-1">' + producto.imagen + '</div>' +
                         '<h6 class="card-title mt-2">' + producto.nombre + '</h6>' +
