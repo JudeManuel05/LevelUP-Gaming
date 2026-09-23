@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>LevelUp Gaming - Productos</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+        <link rel="stylesheet" href="css/estilos.css">
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <header class="lu-header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Menú principal">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Level<span class="text-success">Up</span> Gaming</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                <a class="navbar-brand d-flex align-items-center" href="index.html"><img src="img/logo.svg" alt="Logo LevelUp Gaming">Level<span class="text-success">Up</span> Gaming</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="menuPrincipal">
@@ -21,6 +26,8 @@
                         <li class="nav-item"><a class="nav-link active" href="productos.html">Productos</a></li>
                         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+                        <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html">Iniciar sesión</a></li>
                         <li class="nav-item">
                             <button class="btn btn-success ms-lg-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas">
                                 🛒 Carrito <span class="badge bg-light text-dark" id="contadorCarrito">0</span>
@@ -30,6 +37,9 @@
                 </div>
             </div>
         </nav>
+        </header>
+
+        <main>
 
         <div class="container mt-5 mb-5">
             <h1>Nuestros Productos</h1>
@@ -47,10 +57,34 @@
                 <!-- Las tarjetas de productos se generan con JavaScript -->
             </div>
         </div>
+        </main>
 
-        <footer class="bg-dark text-light text-center py-3">
+        <footer class="lu-footer pt-4 pb-3 mt-auto">
             <div class="container">
-                <p class="mb-0">&copy; 2026 LevelUp Gaming. Todos los derechos reservados.</p>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <h5>Level<span class="lu-acento">Up</span> Gaming</h5>
+                        <p class="small mb-0">Hardware, periféricos y merchandising geek para gamers, streamers y creadores de contenido.</p>
+                    </div>
+                    <nav class="col-md-4" aria-label="Enlaces del pie de página">
+                        <h5>Enlaces</h5>
+                        <ul class="list-unstyled small mb-0">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="productos.html">Productos</a></li>
+                            <li><a href="blog.html">Blog / Noticias</a></li>
+                            <li><a href="registro.html">Crear cuenta</a></li>
+                        </ul>
+                    </nav>
+                    <address class="col-md-4 small mb-0">
+                        <h5>Contacto</h5>
+                        📍 Santiago, Chile<br>
+                        ✉️ <a href="mailto:contacto@levelupgaming.cl">contacto@levelupgaming.cl</a><br>
+                        📞 <a href="tel:+56912345678">+56 9 1234 5678</a><br>
+                        🕒 Lunes a sábado, 10:00 a 20:00 hrs.
+                    </address>
+                </div>
+                <hr class="border-secondary">
+                <p class="text-center small mb-0">&copy; 2026 LevelUp Gaming. Todos los derechos reservados.</p>
             </div>
         </footer>
 
